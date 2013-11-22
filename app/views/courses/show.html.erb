@@ -13,3 +13,25 @@
   <dd><%= @course.number %></dd>
 
 </dl>
+
+<div class="page-header">
+  <h2>This course has met on:</h2>
+</div>
+<!-- On the show page for a course, show a list of all the dates on which it met -->
+<ul>
+
+  <% @course.meetings.each do |meeting| %>
+    <li><%= meeting.course.full_title %> <%= meeting.held_on %></li>
+  <% end %>
+
+</ul>
+
+
+
+
+
+
+
+
+
+

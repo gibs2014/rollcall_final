@@ -21,7 +21,7 @@
         <td><%= meeting.held_on %></td>
 
         <% c = Course.find(meeting.course_id) %>
-        <td><%= c.dept %><%= c.number %> <%= c.title %></td>
+        <td><%= c.full_title %></td>
 
         <td><%= link_to '<i class="fa fa-search-plus"></i>'.html_safe, meeting_url(meeting), class: 'btn btn-primary' %></td>
         <td><%= link_to '<i class="fa fa-edit"></i>'.html_safe, edit_meeting_url(meeting), class: 'btn btn-warning' %></td>

@@ -1,4 +1,6 @@
 Rollcall::Application.routes.draw do
+  root 'meetings#index'
+
   # Routes for the Student resource:
   # CREATE
   get '/students/new', controller: 'students', action: 'new', as: 'new_student'
@@ -16,7 +18,7 @@ Rollcall::Application.routes.draw do
   delete '/students/:id', controller: 'students', action: 'destroy'
   #------------------------------
 
-  root 'meetings#index'
+
 
   # Routes for the Attendance resource:
   # CREATE

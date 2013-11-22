@@ -7,9 +7,7 @@
   <dd><%= @meeting.held_on %></dd>
 
   <dt>Course</dt>
-
-  <% c = Course.find(@meeting.course_id) %>
-  <dd><%= c.dept %><%= c.number %> <%= c.title %></dd>
+  <dd><%= @meeting.course.full_title %></dd>
 
 </dl>
 
@@ -24,8 +22,17 @@
     <% s = Student.find(attendance.student_id) %>
     <li>
       <%= image_tag s.image_url, width: 40, class: "img-circle" %>
-      <%= s.first_name %> <%= s.last_name %></h3>
+      <%= s.full_name %></h3>
     </li>
 
   <% end %>
 </ul>
+
+
+
+
+
+
+
+
+

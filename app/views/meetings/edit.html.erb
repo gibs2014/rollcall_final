@@ -13,18 +13,8 @@
   <div class="form-group">
     <%= label_tag :course_id, nil, class: 'col-md-2 control-label' %>
     <div class="col-md-6">
-      <select name="course_id" class="form-control">
-        <% Course.all.each do |course| %>
-          <% if course.id == @meeting.course_id %>
-            <% previously_selected = "selected" %>
-          <% else %>
-            <% previously_selected = "" %>
-          <% end %>
 
-          <option value="<%= course.id %>" <%= previously_selected %>><%= course.title %></option>
-
-        <% end %>
-      </select>
+      <%= select_tag :course_id, options_from_collection_for_select(Course.all, :id, :full_title, @meeting.course_id), class: "form-control" %>
     </div>
   </div>
 

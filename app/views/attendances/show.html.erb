@@ -12,6 +12,6 @@
 
   <% m = Meeting.find(@attendance.meeting_id) %>
   <% c = Course.find(m.course_id) %>
-  <dd><%= c.dept %><%= c.number %> <%= c.title %> <%= m.held_on %></dd>
+  <dd><%= c.full_title %> <%= m.held_on %></dd>
 
 </dl>

@@ -26,7 +26,7 @@
           <% c = Course.find(meeting.course_id) %>
 
           <option value="<%= meeting.id %>">
-            <%= c.dept%><%= c.number %> <%= c.title %> <%= meeting.held_on %>
+            <%= c.full_title %> <%= meeting.held_on %>
           </option>
 
         <% end %>
